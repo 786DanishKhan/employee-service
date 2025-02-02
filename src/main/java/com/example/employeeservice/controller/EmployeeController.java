@@ -5,7 +5,6 @@ import com.example.employeeservice.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -25,12 +24,12 @@ public class EmployeeController {
     }
 
     @DeleteMapping
-    public void deleteEmployee(@RequestParam Long id){
+    public void deleteEmployee(@RequestParam Long id) {
         employeeRepository.deleteById(id);
     }
 
     @PutMapping
-    public void updateEmployee(@RequestBody Employee employee){
+    public void updateEmployee(@RequestBody Employee employee) {
         employeeRepository.save(employee);
     }
 }
